@@ -24,7 +24,6 @@ $(document).ready(function () {
   $("#one-one, #one-two, #one-three, #one-four").click(function (e) {
     e.preventDefault();
     //$('.w-slider-nav:nth-child(1)').trigger('tap');
-    console.log("dziala");
     $("div.surv_slider_nav.w-slider-nav div:nth-child(2)").trigger("tap");
   });
   $("#two-one, #two-two, #two-three, #two-four").click(function (e) {
@@ -72,15 +71,16 @@ $(document).ready(function () {
     //$('.w-slider-nav:nth-child(1)').trigger('tap');
     $("div.surv_slider_nav.w-slider-nav div:nth-child(11)").trigger("tap");
   });
+  $("#reset_quiz").click(function (e) {
+    console.log("Click event triggered.");
+    e.preventDefault();
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
+    console.log("Triggered first slide.");
+    window.localStorage.clear();
+    console.log("Local storage cleared.");
+  });
 });
 
-document.getElementById("reset_quiz").addEventListener("click", function (e) {
-  e.preventDefault();
-  document
-    .querySelector("surv_slider_nav.w-slider-nav:nth-child(1)")
-    .dispatchEvent(new Event("tap"));
-  localStorage.clear();
-});
 //$(".quiz-wrapper").find(".quiz-a").removeClass("selected");
 $("#1").find(".tab_line").find(".tabline").addClass("tab_active");
 
