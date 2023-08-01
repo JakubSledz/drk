@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document
       .querySelector("div.surv_slider_nav.w-slider-nav div:nth-child(1)")
       .dispatchEvent(new Event("tap"));
+    localStorage.clear();
   });
 
   // Setting "tab_active" class on element with ID "1"
