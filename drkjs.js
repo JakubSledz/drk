@@ -201,6 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // document.querySelector(".reset-quiz").addEventListener("click", function () {
   //   document.querySelectorAll(".quiz-a").forEach(function (answer) {
   //     answer.classList.remove("selected");
+
   //   });
   //   document.querySelector("div.surv_slider_nav.w-slider-nav div:nth-child(1)").dispatchEvent(new Event("tap"));
   //   localStorage.clear();
