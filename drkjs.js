@@ -72,12 +72,8 @@ $(document).ready(function () {
     $("div.surv_slider_nav.w-slider-nav div:nth-child(11)").trigger("tap");
   });
   $("#reset_quiz").click(function (e) {
-    console.log("Click event triggered.");
     e.preventDefault();
     $("div.surv_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
-    console.log("Triggered first slide.");
-    window.localStorage.clear();
-    console.log("Local storage cleared.");
   });
 });
 
