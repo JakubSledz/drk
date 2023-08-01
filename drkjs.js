@@ -251,11 +251,6 @@ $(".check-answer").on("click", function () {
 
 $(".reset-quiz").on("click", function () {
   $(".quiz-wrapper").find(".quiz-a").removeClass("selected");
-  localStorage.clear();
-});
-
-$(".back-to-factions").on("click", function () {
-  $(".quiz-wrapper").find(".quiz-a").removeClass("selected");
   $("div.surv_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
   localStorage.clear();
 });
