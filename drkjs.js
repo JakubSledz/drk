@@ -76,7 +76,7 @@ $(document).ready(function () {
     e.preventDefault();
     //$('.w-slider-nav:nth-child(1)').trigger('tap');
     // $(".quiz-wrapper").find(".quiz-a").removeClass("selected");
-    // localStorage.clear();
+    localStorage.clear();
     $("div.surv_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
   });
 });
