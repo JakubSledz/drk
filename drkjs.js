@@ -78,6 +78,7 @@ $(".reset-quiz").on("click", function (e) {
   e.preventDefault();
   $(".quiz-wrapper").find(".quiz-a").removeClass("selected");
   localStorage.clear();
+  alert("I hate tomatoes.");
   $("div.surv_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
   console.log("dziala");
 });
