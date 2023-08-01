@@ -71,7 +71,11 @@ $(document).ready(function () {
     //$('.w-slider-nav:nth-child(1)').trigger('tap');
     $("div.surv_slider_nav.w-slider-nav div:nth-child(11)").trigger("tap");
   });
-  //gotoslide3 ...
+  //QUIZ RESET
+  $(".reset-quiz").on("click", function (e) {
+    e.preventDefault();
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
+  });
 });
 
 $("#1").find(".tab_line").find(".tabline").addClass("tab_active");
@@ -304,9 +308,6 @@ $(".reset-quiz").on("click", function () {
   localStorage.clear();
 });
 */
-$(".reset-quiz").on("click", function () {
-  $("div.surv_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
-});
 
 var Webflow = Webflow || [];
 Webflow.push(function () {
