@@ -75,7 +75,7 @@ $(document).ready(function () {
 });
 
 //QUIZ RESET
-$("reset-quiz").on("click", function (e) {
+$("#reset-quiz").on("click", function (e) {
   e.preventDefault();
   $(".quiz-wrapper").find(".quiz-a").removeClass("selected");
   localStorage.clear();
