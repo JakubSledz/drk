@@ -52,6 +52,11 @@ document.addEventListener("DOMContentLoaded", function () {
       .querySelector("div.surv_slider_nav.w-slider-nav div:nth-child(1)")
       .dispatchEvent(new Event("tap"));
     localStorage.clear();
+    // Removing the "selected" class from all elements with the class "quiz-a"
+    const selectedElements = document.querySelectorAll(".quiz-a.selected");
+    selectedElements.forEach(function (element) {
+      element.classList.remove("selected");
+    });
   });
 
   // Setting "tab_active" class on element with ID "1"
