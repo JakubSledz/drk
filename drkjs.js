@@ -24,7 +24,7 @@ $(document).ready(function () {
   $("#one-one, #one-two, #one-three, #one-four").click(function (e) {
     e.preventDefault();
     //$('.w-slider-nav:nth-child(1)').trigger('tap');
-    alert("I hate tomatoes.");
+    console.log("dziala");
     $("div.surv_slider_nav.w-slider-nav div:nth-child(2)").trigger("tap");
   });
   $("#two-one, #two-two, #two-three, #two-four").click(function (e) {
