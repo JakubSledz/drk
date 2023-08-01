@@ -73,15 +73,15 @@ $(document).ready(function () {
     $("div.surv_slider_nav.w-slider-nav div:nth-child(11)").trigger("tap");
   });
   $("#reset_quiz").click(function (e) {
+    console.log("Click event triggered.");
     e.preventDefault();
-    //$('.w-slider-nav:nth-child(1)').trigger('tap');
-    //
     $("div.surv_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
+    console.log("Triggered first slide.");
     localStorage.clear();
-    $(".quiz-wrapper").find(".quiz-a").removeClass("selected");
+    console.log("Local storage cleared.");
   });
 });
-
+//$(".quiz-wrapper").find(".quiz-a").removeClass("selected");
 $("#1").find(".tab_line").find(".tabline").addClass("tab_active");
 
 $("#1").find(".tab_line").find(".tab_shape").addClass("tab_active");
