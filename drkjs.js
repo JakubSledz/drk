@@ -75,9 +75,10 @@ $(document).ready(function () {
   $("#reset_quiz").click(function (e) {
     e.preventDefault();
     //$('.w-slider-nav:nth-child(1)').trigger('tap');
-    // $(".quiz-wrapper").find(".quiz-a").removeClass("selected");
+    //
     $("div.surv_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
     localStorage.clear();
+    $(".quiz-wrapper").find(".quiz-a").removeClass("selected");
   });
 });
 
