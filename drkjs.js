@@ -77,7 +77,7 @@ $(document).ready(function () {
 document.getElementById("reset_quiz").addEventListener("click", function (e) {
   e.preventDefault();
   document
-    .querySelector("div.surv_slider_nav.w-slider-nav div:nth-child(1)")
+    .querySelector("surv_slider_nav.w-slider-nav:nth-child(1)")
     .dispatchEvent(new Event("tap"));
   localStorage.clear();
 });
