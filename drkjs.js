@@ -248,11 +248,15 @@ $(".check-answer").on("click", function () {
 
   //Use jQuery to display the copy in an element with the id "result"
 });
-
+/*
 $(".reset-quiz").on("click", function () {
   $(".quiz-wrapper").find(".quiz-a").removeClass("selected");
   $("div.surv_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
   localStorage.clear();
+});
+*/
+$(".reset-quiz").on("click", function () {
+  $("div.surv_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
 });
 
 var Webflow = Webflow || [];
