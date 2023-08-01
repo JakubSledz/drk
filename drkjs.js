@@ -72,16 +72,13 @@ $(document).ready(function () {
     //$('.w-slider-nav:nth-child(1)').trigger('tap');
     $("div.surv_slider_nav.w-slider-nav div:nth-child(11)").trigger("tap");
   });
-});
-
-//QUIZ RESET
-$("#reset-quiz").on("click", function (e) {
-  e.preventDefault();
-  $(".quiz-wrapper").find(".quiz-a").removeClass("selected");
-  localStorage.clear();
-
-  $("div.surv_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
-  console.log("dziala");
+  $("#reset_quiz").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $(".quiz-wrapper").find(".quiz-a").removeClass("selected");
+    localStorage.clear();
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
+  });
 });
 
 $("#1").find(".tab_line").find(".tabline").addClass("tab_active");
