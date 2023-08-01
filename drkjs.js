@@ -53,9 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
       .dispatchEvent(new Event("tap"));
     localStorage.clear();
     // Removing the "selected" class from all elements with the class "quiz-a"
-    const selectedElements = document.querySelectorAll(".quiz-a.selected");
-    selectedElements.forEach(function (element) {
-      element.classList.remove("selected");
+    const quizAnswers = document.querySelectorAll(".quiz-a");
+    quizAnswers.forEach(function (answer) {
+      answer.classList.remove("selected");
     });
   });
 
