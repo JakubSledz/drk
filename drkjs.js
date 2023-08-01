@@ -53,10 +53,10 @@ document.addEventListener("DOMContentLoaded", function () {
       .dispatchEvent(new Event("tap"));
     localStorage.clear();
     // Removing the "selected" class from all elements with the class "quiz-a"
-    const quizAnswers = document.querySelectorAll(".quiz-a");
-    quizAnswers.forEach(function (answer) {
-      answer.classList.remove("selected");
-    });
+    const quizAnswers = document.getElementsByClassName("quiz-a");
+    while (quizAnswers.length) {
+      quizAnswers[0].classList.remove("selected");
+    }
   });
 
   // Setting "tab_active" class on element with ID "1"
