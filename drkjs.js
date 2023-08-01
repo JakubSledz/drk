@@ -198,14 +198,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   // Uncomment the following code if you need to handle reset functionality
-  // document.querySelector(".reset-quiz").addEventListener("click", function () {
-  //   document.querySelectorAll(".quiz-a").forEach(function (answer) {
-  //     answer.classList.remove("selected");
-
-  //   });
-  //   document.querySelector("div.surv_slider_nav.w-slider-nav div:nth-child(1)").dispatchEvent(new Event("tap"));
-  //   localStorage.clear();
-  // });
+  document.querySelector(".reset-quiz").addEventListener("click", function () {
+    document.querySelectorAll(".quiz-a").forEach(function (answer) {
+      answer.classList.remove("selected");
+    });
+    document
+      .querySelector("div.surv_slider_nav.w-slider-nav div:nth-child(1)")
+      .dispatchEvent(new Event("tap"));
+    localStorage.clear();
+  });
 
   // Code for Webflow Slider
   const l = document.querySelector("#quiz-slider .w-slider-arrow-left");
