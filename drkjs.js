@@ -51,12 +51,13 @@ document.addEventListener("DOMContentLoaded", function () {
     document
       .querySelector("div.surv_slider_nav.w-slider-nav div:nth-child(1)")
       .dispatchEvent(new Event("tap"));
-    localStorage.clear();
+    localStorage.clear(); // Clearing the localStorage here
+
     // Removing the "selected" class from all elements with the class "quiz-a"
     const quizAnswers = document.querySelectorAll(".quiz-a");
-    for (let i = 0; i < quizAnswers.length; i++) {
-      quizAnswers[i].classList.remove("selected");
-    }
+    quizAnswers.forEach(function (answer) {
+      answer.classList.remove("selected");
+    });
   });
 
   // Setting "tab_active" class on element with ID "1"
@@ -202,15 +203,6 @@ document.addEventListener("DOMContentLoaded", function () {
           copyElement.textContent = "Average is out of range.";
       }
     });
-
-  // Uncomment the following code if you need to handle reset functionality
-  // document.querySelector(".reset-quiz").addEventListener("click", function () {
-  //   document.querySelectorAll(".quiz-a").forEach(function (answer) {
-  //     answer.classList.remove("selected");
-  //   });
-  //   document.querySelector("div.surv_slider_nav.w-slider-nav div:nth-child(1)").dispatchEvent(new Event("tap"));
-  //   localStorage.clear();
-  // });
 
   // Code for Webflow Slider
   const l = document.querySelector("#quiz-slider .w-slider-arrow-left");
