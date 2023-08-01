@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  // gotoslide1
+  // FACTIONS NAV
   $("#1").click(function (e) {
     e.preventDefault();
     //$('.w-slider-nav:nth-child(1)').trigger('tap');
@@ -20,8 +20,57 @@ $(document).ready(function () {
     $("div.factions_slider_nav.w-slider-nav div:nth-child(4)").trigger("tap");
     //$('.w-slider-nav:nth-child(2)').trigger('tap');
   });
-
-  //gotoslide2 ...
+  //QUIZ NAV
+  $("#one-one, #one-two, #one-three, #one-four").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(2)").trigger("tap");
+  });
+  $("#two-one, #two-two, #two-three, #two-four").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(3)").trigger("tap");
+  });
+  $("#three-one, #three-two, #three-three, #three-four").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(4)").trigger("tap");
+  });
+  $("#four-one, #four-two, #four-three, #four-four").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(5)").trigger("tap");
+  });
+  $("#five-one, #five-two, #five-three, #five-four").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(6)").trigger("tap");
+  });
+  $("#six-one, #six-two, #six-three, #six-four").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(7)").trigger("tap");
+  });
+  $("#seven-one, #seven-two, #seven-three, #seven-four").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(8)").trigger("tap");
+  });
+  $("#eight-one, #eight-two, #eight-three, #eight-four").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(9)").trigger("tap");
+  });
+  $("#nine-one, #nine-two, #nine-three, #nine-four").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(10)").trigger("tap");
+  });
+  $("#ten-one, #ten-two, #ten-three, #ten-four").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(11)").trigger("tap");
+  });
   //gotoslide3 ...
 });
 
@@ -138,14 +187,14 @@ $(".quiz-a").on("click", function () {
   $(this).addClass("selected");
   $(this).siblings(".quiz-a").removeClass("selected");
 });
-
+/*
 $(".close-quiz").on("click", function () {
   $(".quiz-wrapper").addClass("hidden");
   $(".quiz-wrapper").removeClass("show");
   $(".quiz-wrapper").find(".quiz-a").removeClass("selected");
   localStorage.clear();
 });
-
+*/
 $(".btn-quiz-open.nomargin").on("click", function () {
   $(".quiz-wrapper").removeClass("hidden");
   $(".quiz-wrapper").addClass("show");
@@ -270,60 +319,4 @@ Webflow.push(function () {
     .on("click", ".quiz-a", function () {
       r.trigger("tap");
     });
-});
-$(document).ready(function () {
-  // gotoslide1
-  $("#one-one, #one-two, #one-three, #one-four").click(function (e) {
-    e.preventDefault();
-    //$('.w-slider-nav:nth-child(1)').trigger('tap');
-    $("div.surv_slider_nav.w-slider-nav div:nth-child(2)").trigger("tap");
-  });
-  $("#two-one, #two-two, #two-three, #two-four").click(function (e) {
-    e.preventDefault();
-    //$('.w-slider-nav:nth-child(1)').trigger('tap');
-    $("div.surv_slider_nav.w-slider-nav div:nth-child(3)").trigger("tap");
-  });
-  $("#three-one, #three-two, #three-three, #three-four").click(function (e) {
-    e.preventDefault();
-    //$('.w-slider-nav:nth-child(1)').trigger('tap');
-    $("div.surv_slider_nav.w-slider-nav div:nth-child(4)").trigger("tap");
-  });
-  $("#four-one, #four-two, #four-three, #four-four").click(function (e) {
-    e.preventDefault();
-    //$('.w-slider-nav:nth-child(1)').trigger('tap');
-    $("div.surv_slider_nav.w-slider-nav div:nth-child(5)").trigger("tap");
-  });
-  $("#five-one, #five-two, #five-three, #five-four").click(function (e) {
-    e.preventDefault();
-    //$('.w-slider-nav:nth-child(1)').trigger('tap');
-    $("div.surv_slider_nav.w-slider-nav div:nth-child(6)").trigger("tap");
-  });
-  $("#six-one, #six-two, #six-three, #six-four").click(function (e) {
-    e.preventDefault();
-    //$('.w-slider-nav:nth-child(1)').trigger('tap');
-    $("div.surv_slider_nav.w-slider-nav div:nth-child(7)").trigger("tap");
-  });
-  $("#seven-one, #seven-two, #seven-three, #seven-four").click(function (e) {
-    e.preventDefault();
-    //$('.w-slider-nav:nth-child(1)').trigger('tap');
-    $("div.surv_slider_nav.w-slider-nav div:nth-child(8)").trigger("tap");
-  });
-  $("#eight-one, #eight-two, #eight-three, #eight-four").click(function (e) {
-    e.preventDefault();
-    //$('.w-slider-nav:nth-child(1)').trigger('tap');
-    $("div.surv_slider_nav.w-slider-nav div:nth-child(9)").trigger("tap");
-  });
-  $("#nine-one, #nine-two, #nine-three, #nine-four").click(function (e) {
-    e.preventDefault();
-    //$('.w-slider-nav:nth-child(1)').trigger('tap');
-    $("div.surv_slider_nav.w-slider-nav div:nth-child(10)").trigger("tap");
-  });
-  $("#ten-one, #ten-two, #ten-three, #ten-four").click(function (e) {
-    e.preventDefault();
-    //$('.w-slider-nav:nth-child(1)').trigger('tap');
-    $("div.surv_slider_nav.w-slider-nav div:nth-child(11)").trigger("tap");
-  });
-
-  //gotoslide2 ...
-  //gotoslide3 ...
 });
