@@ -1,3 +1,47 @@
+console.log("DOM Loaded");
+console.log(
+  "Element with ID '1' exists:",
+  document.getElementById("1") !== null
+);
+console.log(
+  "Element with ID '2' exists:",
+  document.getElementById("2") !== null
+);
+console.log(
+  "Element with ID '3' exists:",
+  document.getElementById("3") !== null
+);
+console.log(
+  "Element with ID '4' exists:",
+  document.getElementById("4") !== null
+);
+
+for (let i = 1; i <= 10; i++) {
+  const questionIds = [
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    "nine",
+    "ten",
+  ];
+  questionIds.forEach(function (questionId) {
+    console.log(
+      `Element with ID '${questionId}-${i}' exists:`,
+      document.getElementById(`${questionId}-${i}`) !== null
+    );
+  });
+}
+
+console.log(
+  "Element with ID 'reset_quiz' exists:",
+  document.getElementById("reset_quiz") !== null
+);
+
 document.addEventListener("DOMContentLoaded", function () {
   // Helper function to check if an element exists before adding an event listener
   function addClickListener(elementId, callback) {
