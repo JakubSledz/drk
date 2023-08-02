@@ -46,12 +46,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Handling quiz reset
   document.getElementById("reset_quiz").addEventListener("click", function (e) {
     e.preventDefault();
-    document
-      .querySelector("div.surv_slider_nav.w-slider-nav div:nth-child(1)")
-      .dispatchEvent(new Event("tap"));
-    localStorage.clear(); // Clearing the localStorage here
+    const firstSlide = document.querySelector(
+      "div.surv_slider_nav.w-slider-nav div:nth-child(1)"
+    );
+    firstSlide.dispatchEvent(new Event("tap"));
+    localStorage.clear();
 
     // Removing the "selected" class from all elements with the class "quiz-a"
     const quizAnswers = document.querySelectorAll(".quiz-a");
@@ -194,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
       switch (mostFrequentNumber) {
         case 1:
           copy = "Hedonists";
-          document.querySelector(".answer-value").forEach(function (el) {
+          document.querySelectorAll(".answer-value").forEach(function (el) {
             el.textContent = copy;
           });
           document.querySelector(".answer-logo").classList.add("hedo");
@@ -204,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
           break;
         case 2:
           copy = "Barbarians";
-          document.querySelector(".answer-value").forEach(function (el) {
+          document.querySelectorAll(".answer-value").forEach(function (el) {
             el.textContent = copy;
           });
           document.querySelector(".answer-logo").classList.add("barba");
@@ -214,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function () {
           break;
         case 3:
           copy = "Nomads";
-          document.querySelector(".answer-value").forEach(function (el) {
+          document.querySelectorAll(".answer-value").forEach(function (el) {
             el.textContent = copy;
           });
           document.querySelector(".answer-logo").classList.add("nomads");
@@ -224,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function () {
           break;
         case 4:
           copy = "Technognostics";
-          document.querySelector(".answer-value").forEach(function (el) {
+          document.querySelectorAll(".answer-value").forEach(function (el) {
             el.textContent = copy;
           });
           document.querySelector(".answer-logo").classList.add("techno");
