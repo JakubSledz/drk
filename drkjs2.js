@@ -230,15 +230,6 @@ document.querySelectorAll(".quiz-a").forEach(function (quizA) {
   });
 });
 
-document
-  .querySelector(".btn-quiz-open.nomargin")
-  .addEventListener("click", function () {
-    document.querySelector(".quiz-wrapper").classList.remove("hidden");
-    document.querySelector(".quiz-wrapper").classList.add("show");
-    document.querySelector(".answer-value").classList.add("hidden");
-    document.querySelector(".answer-value").classList.remove("show");
-  });
-
 document.querySelector(".check-answer").addEventListener("click", function () {
   let answers = [
     Number(localStorage.getItem("answerOne")),
