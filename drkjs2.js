@@ -1,3 +1,5 @@
+//v1
+
 document.addEventListener("DOMContentLoaded", function () {
   // FACTIONS NAV
   document.getElementById("1").addEventListener("click", function (e) {
