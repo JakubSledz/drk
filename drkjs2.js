@@ -43,7 +43,8 @@ console.log(
 );
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Helper function to check if an element exists before adding an event listener
+  console.log("DOM Loaded");
+
   function addClickListener(elementId, callback) {
     const element = document.getElementById(elementId);
     if (element) {
