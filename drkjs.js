@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
       `#one-${i}, #two-${i}, #three-${i}, #four-${i}, #five-${i}, #six-${i}, #seven-${i}, #eight-${i}, #nine-${i}, #ten-${i}`
     );
     quizElements.forEach(function (element) {
-      element.addEventListener("click", triggerQuizNav(i + 1));
+      element.addEventListener("click", triggerQuizNav(i + 2)); // Update the index to go to the next slide
     });
   }
 
