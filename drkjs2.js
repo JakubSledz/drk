@@ -3,9 +3,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function addClickListener(elementId, callback) {
     const element = document.getElementById(elementId);
-    if (element) {
-      element.addEventListener("click", callback);
+    if (!element) {
+      console.error(`Element with ID '${elementId}' not found in the DOM.`);
+      return;
     }
+
+    element.addEventListener("click", callback);
   }
 
   // FACTIONS NAV
