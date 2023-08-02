@@ -303,19 +303,3 @@ document.querySelector(".check-answer").addEventListener("click", function () {
       copy = "Average is out of range.";
   }
 });
-
-var Webflow = Webflow || [];
-Webflow.push(function () {
-  var l = document.querySelector("#quiz-slider .w-slider-arrow-left");
-  var r = document.querySelector("#quiz-slider .quiz-right-arrow");
-
-  document
-    .querySelector("#quiz-slider")
-    .addEventListener("click", function (e) {
-      if (e.target.classList.contains("back-button")) {
-        l.dispatchEvent(new Event("tap"));
-      } else if (e.target.classList.contains("quiz-a")) {
-        r.dispatchEvent(new Event("tap"));
-      }
-    });
-});
