@@ -1,4 +1,4 @@
-//v1
+//v2
 
 document.addEventListener("DOMContentLoaded", function () {
   // FACTIONS NAV
