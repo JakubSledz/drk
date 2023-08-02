@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("DOM Loaded");
+//NEW
 
+document.addEventListener("DOMContentLoaded", function () {
   function addClickListener(elementId, callback) {
     const element = document.getElementById(elementId);
     if (!element) {
@@ -12,78 +12,43 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // FACTIONS NAV
-  addClickListener("1", function (e) {
-    e.preventDefault();
-    document
-      .querySelector("div.factions_slider_nav.w-slider-nav div:nth-child(1)")
-      .dispatchEvent(new Event("tap"));
-  });
-
-  addClickListener("2", function (e) {
-    e.preventDefault();
-    document
-      .querySelector("div.factions_slider_nav.w-slider-nav div:nth-child(2)")
-      .dispatchEvent(new Event("tap"));
-  });
-
-  addClickListener("3", function (e) {
-    e.preventDefault();
-    document
-      .querySelector("div.factions_slider_nav.w-slider-nav div:nth-child(3)")
-      .dispatchEvent(new Event("tap"));
-  });
-
-  addClickListener("4", function (e) {
-    e.preventDefault();
-    document
-      .querySelector("div.factions_slider_nav.w-slider-nav div:nth-child(4)")
-      .dispatchEvent(new Event("tap"));
-  });
-
-  // QUIZ NAV
-  function triggerQuizNav(index) {
-    return function (e) {
+  for (let i = 1; i <= 4; i++) {
+    addClickListener(i.toString(), function (e) {
       e.preventDefault();
       document
         .querySelector(
-          `div.surv_slider_nav.w-slider-nav div:nth-child(${index})`
+          `div.factions_slider_nav.w-slider-nav div:nth-child(${i})`
         )
         .dispatchEvent(new Event("tap"));
-    };
-  }
-
-  for (let i = 1; i <= 10; i++) {
-    const questionIds = [
-      "one",
-      "two",
-      "three",
-      "four",
-      "five",
-      "six",
-      "seven",
-      "eight",
-      "nine",
-      "ten",
-    ];
-    questionIds.forEach(function (questionId) {
-      addClickListener(`${questionId}-${i}`, triggerQuizNav(i + 1));
     });
   }
 
-  // Handling quiz reset
+  // QUIZ NAV
+  for (let i = 1; i <= 10; i++) {
+    addClickListener(`one-${i}`, function (e) {
+      e.preventDefault();
+      document
+        .querySelector(
+          `div.surv_slider_nav.w-slider-nav div:nth-child(${i + 1})`
+        )
+        .dispatchEvent(new Event("tap"));
+    });
+  }
+
   addClickListener("reset_quiz", function (e) {
     e.preventDefault();
-    const firstSlide = document.querySelector(
-      "div.surv_slider_nav.w-slider-nav div:nth-child(1)"
-    );
-    firstSlide.dispatchEvent(new Event("tap"));
-    localStorage.clear();
+    document
+      .querySelector("div.surv_slider_nav.w-slider-nav div:nth-child(1)")
+      .dispatchEvent(new Event("tap"));
 
-    // Removing the "selected" class from all elements with the class "quiz-a"
+    // Clear selected class from all quiz answers
     const quizAnswers = document.querySelectorAll(".quiz-a");
-    quizAnswers.forEach(function (answer) {
+    quizAnswers.forEach((answer) => {
       answer.classList.remove("selected");
     });
+
+    // Clear localStorage
+    localStorage.clear();
   });
 
   // Setting "tab_active" class on element with ID "1"
