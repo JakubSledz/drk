@@ -51,6 +51,13 @@ document.addEventListener("DOMContentLoaded", function () {
     document
       .querySelector("div.surv_slider_nav.w-slider-nav div:nth-child(1)")
       .dispatchEvent(new Event("tap"));
+    localStorage.clear(); // Clearing the localStorage here
+
+    // Removing the "selected" class from all elements with the class "quiz-a"
+    const quizAnswers = document.querySelectorAll(".quiz-a");
+    quizAnswers.forEach(function (answer) {
+      answer.classList.remove("selected");
+    });
   });
 
   // Setting "tab_active" class on element with ID "1"
@@ -147,77 +154,106 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .querySelector(".check-answer")
     .addEventListener("click", function () {
-      // Get answers from localStorage
-      const answers = Array.from({ length: 11 }, (_, i) =>
-        Number(localStorage.getItem(`answer${i + 1}`))
-      );
+      //Array of numbers
+      const answers = [
+        Number(localStorage.getItem("answer1")),
+        Number(localStorage.getItem("answer2")),
+        Number(localStorage.getItem("answer3")),
+        Number(localStorage.getItem("answer4")),
+        Number(localStorage.getItem("answer5")),
+        Number(localStorage.getItem("answer6")),
+        Number(localStorage.getItem("answer7")),
+        Number(localStorage.getItem("answer8")),
+        Number(localStorage.getItem("answer9")),
+        Number(localStorage.getItem("answer10")),
+        Number(localStorage.getItem("answer11")),
+      ];
 
-      // Function to calculate the most frequent number
+      //Function to calculate the most frequent number in the array
       function mostFrequent(arr) {
         const counts = { 1: 0, 2: 0, 3: 0, 4: 0 };
         let maxKey = 1;
 
-        for (const num of arr) {
-          if (num >= 1 && num <= 4) {
-            counts[num]++;
-            if (counts[num] > counts[maxKey]) {
-              maxKey = num;
+        for (let i = 0; i < arr.length; i++) {
+          const key = arr[i];
+          if (key >= 1 && key <= 4) {
+            counts[key]++;
+            if (counts[key] > counts[maxKey]) {
+              maxKey = key;
             }
           }
         }
         return maxKey;
       }
 
-      // Get the most frequent answer
-      const mostFrequentAnswer = mostFrequent(answers);
+      //Get the most frequent number from the answers array
+      const mostFrequentNumber = mostFrequent(answers);
 
-      // Display the result
-      const copyElement = document.querySelector(".answer-value");
-      const logoElement = document.querySelector(".answer-logo");
-
-      switch (mostFrequentAnswer) {
+      //Set the appropriate copy and class based on the most frequent number
+      let copy;
+      switch (mostFrequentNumber) {
         case 1:
-          copyElement.textContent = "Hedonists";
-          logoElement.className = "answer-logo hedo";
+          copy = "Hedonists";
+          document.querySelector(".answer-value").forEach(function (el) {
+            el.textContent = copy;
+          });
+          document.querySelector(".answer-logo").classList.add("hedo");
+          document
+            .querySelector(".answer-logo")
+            .classList.remove("techno", "nomads", "barba");
           break;
         case 2:
-          copyElement.textContent = "Barbarians";
-          logoElement.className = "answer-logo barba";
+          copy = "Barbarians";
+          document.querySelector(".answer-value").forEach(function (el) {
+            el.textContent = copy;
+          });
+          document.querySelector(".answer-logo").classList.add("barba");
+          document
+            .querySelector(".answer-logo")
+            .classList.remove("techno", "nomads", "hedo");
           break;
         case 3:
-          copyElement.textContent = "Nomads";
-          logoElement.className = "answer-logo nomads";
+          copy = "Nomads";
+          document.querySelector(".answer-value").forEach(function (el) {
+            el.textContent = copy;
+          });
+          document.querySelector(".answer-logo").classList.add("nomads");
+          document
+            .querySelector(".answer-logo")
+            .classList.remove("techno", "barba", "hedo");
           break;
         case 4:
-          copyElement.textContent = "Technognostics";
-          logoElement.className = "answer-logo techno";
+          copy = "Technognostics";
+          document.querySelector(".answer-value").forEach(function (el) {
+            el.textContent = copy;
+          });
+          document.querySelector(".answer-logo").classList.add("techno");
+          document
+            .querySelector(".answer-logo")
+            .classList.remove("nomads", "barba", "hedo");
           break;
         default:
-          copyElement.textContent = "Average is out of range.";
+          copy = "Average is out of range.";
       }
     });
 
-  // Uncomment the following code if you need to handle reset functionality
-  document.querySelector(".reset-quiz").addEventListener("click", function () {
-    document.querySelectorAll(".quiz-a").forEach(function (answer) {
-      answer.classList.remove("selected");
-    });
+  // Webflow Slider handling
+  var Webflow = Webflow || [];
+  Webflow.push(function () {
+    const l = document
+      .getElementById("quiz-slider")
+      .querySelector(".w-slider-arrow-left");
+    const r = document
+      .getElementById("quiz-slider")
+      .querySelector(".quiz-right-arrow");
     document
-      .querySelector("div.surv_slider_nav.w-slider-nav div:nth-child(1)")
-      .dispatchEvent(new Event("tap"));
-    localStorage.clear();
+      .getElementById("quiz-slider")
+      .addEventListener("click", function (event) {
+        if (event.target.classList.contains("back-button")) {
+          l.dispatchEvent(new Event("tap"));
+        } else if (event.target.classList.contains("quiz-a")) {
+          r.dispatchEvent(new Event("tap"));
+        }
+      });
   });
-
-  // Code for Webflow Slider
-  const l = document.querySelector("#quiz-slider .w-slider-arrow-left");
-  const r = document.querySelector("#quiz-slider .quiz-right-arrow");
-  document
-    .getElementById("quiz-slider")
-    .addEventListener("click", function (event) {
-      if (event.target.classList.contains("back-button")) {
-        l.dispatchEvent(new Event("tap"));
-      } else if (event.target.classList.contains("quiz-a")) {
-        r.dispatchEvent(new Event("tap"));
-      }
-    });
 });
