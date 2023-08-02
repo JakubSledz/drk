@@ -1,252 +1,247 @@
-//v2
+//v3
 
-document.addEventListener("DOMContentLoaded", function () {
+$(document).ready(function () {
   // FACTIONS NAV
-  document.getElementById("1").addEventListener("click", function (e) {
+  $("#1").click(function (e) {
     e.preventDefault();
-    document
-      .querySelector("div.factions_slider_nav.w-slider-nav div:nth-child(1)")
-      .dispatchEvent(new Event("tap"));
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.factions_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
   });
-  document.getElementById("2").addEventListener("click", function (e) {
+  $("#2").click(function (e) {
     e.preventDefault();
-    document
-      .querySelector("div.factions_slider_nav.w-slider-nav div:nth-child(2)")
-      .dispatchEvent(new Event("tap"));
+    $("div.factions_slider_nav.w-slider-nav div:nth-child(2)").trigger("tap");
+    //$('.w-slider-nav:nth-child(2)').trigger('tap');
   });
-  document.getElementById("3").addEventListener("click", function (e) {
+  $("#3").click(function (e) {
     e.preventDefault();
-    document
-      .querySelector("div.factions_slider_nav.w-slider-nav div:nth-child(3)")
-      .dispatchEvent(new Event("tap"));
+    $("div.factions_slider_nav.w-slider-nav div:nth-child(3)").trigger("tap");
+    //$('.w-slider-nav:nth-child(2)').trigger('tap');
   });
-  document.getElementById("4").addEventListener("click", function (e) {
+  $("#4").click(function (e) {
     e.preventDefault();
-    document
-      .querySelector("div.factions_slider_nav.w-slider-nav div:nth-child(4)")
-      .dispatchEvent(new Event("tap"));
+    $("div.factions_slider_nav.w-slider-nav div:nth-child(4)").trigger("tap");
+    //$('.w-slider-nav:nth-child(2)').trigger('tap');
   });
-
   //QUIZ NAV
-  const quizNavClickHandler = function (e) {
+  $("#one-one, #one-two, #one-three, #one-four").click(function (e) {
     e.preventDefault();
-    document
-      .querySelector("div.surv_slider_nav.w-slider-nav div:nth-child(2)")
-      .dispatchEvent(new Event("tap"));
-  };
-
-  document
-    .querySelectorAll("#one-one, #one-two, #one-three, #one-four")
-    .forEach(function (el) {
-      el.addEventListener("click", quizNavClickHandler);
-    });
-  document
-    .querySelectorAll("#two-one, #two-two, #two-three, #two-four")
-    .forEach(function (el) {
-      el.addEventListener("click", quizNavClickHandler);
-    });
-  document
-    .querySelectorAll("#three-one, #three-two, #three-three, #three-four")
-    .forEach(function (el) {
-      el.addEventListener("click", quizNavClickHandler);
-    });
-  document
-    .querySelectorAll("#four-one, #four-two, #four-three, #four-four")
-    .forEach(function (el) {
-      el.addEventListener("click", quizNavClickHandler);
-    });
-  document
-    .querySelectorAll("#five-one, #five-two, #five-three, #five-four")
-    .forEach(function (el) {
-      el.addEventListener("click", quizNavClickHandler);
-    });
-  document
-    .querySelectorAll("#six-one, #six-two, #six-three, #six-four")
-    .forEach(function (el) {
-      el.addEventListener("click", quizNavClickHandler);
-    });
-  document
-    .querySelectorAll("#seven-one, #seven-two, #seven-three, #seven-four")
-    .forEach(function (el) {
-      el.addEventListener("click", quizNavClickHandler);
-    });
-  document
-    .querySelectorAll("#eight-one, #eight-two, #eight-three, #eight-four")
-    .forEach(function (el) {
-      el.addEventListener("click", quizNavClickHandler);
-    });
-  document
-    .querySelectorAll("#nine-one, #nine-two, #nine-three, #nine-four")
-    .forEach(function (el) {
-      el.addEventListener("click", quizNavClickHandler);
-    });
-  document
-    .querySelectorAll("#ten-one, #ten-two, #ten-three, #ten-four")
-    .forEach(function (el) {
-      el.addEventListener("click", quizNavClickHandler);
-    });
-
-  document.getElementById("reset_quiz").addEventListener("click", function (e) {
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    console.log("dziala");
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(2)").trigger("tap");
+  });
+  $("#two-one, #two-two, #two-three, #two-four").click(function (e) {
     e.preventDefault();
-    document
-      .querySelector("div.surv_slider_nav.w-slider-nav div:nth-child(1)")
-      .dispatchEvent(new Event("tap"));
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(3)").trigger("tap");
+  });
+  $("#three-one, #three-two, #three-three, #three-four").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(4)").trigger("tap");
+  });
+  $("#four-one, #four-two, #four-three, #four-four").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(5)").trigger("tap");
+  });
+  $("#five-one, #five-two, #five-three, #five-four").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(6)").trigger("tap");
+  });
+  $("#six-one, #six-two, #six-three, #six-four").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(7)").trigger("tap");
+  });
+  $("#seven-one, #seven-two, #seven-three, #seven-four").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(8)").trigger("tap");
+  });
+  $("#eight-one, #eight-two, #eight-three, #eight-four").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(9)").trigger("tap");
+  });
+  $("#nine-one, #nine-two, #nine-three, #nine-four").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(10)").trigger("tap");
+  });
+  $("#ten-one, #ten-two, #ten-three, #ten-four").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(11)").trigger("tap");
+  });
+  $("#reset_quiz").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    // $(".quiz-wrapper").find(".quiz-a").removeClass("selected");
+    // localStorage.clear();
+    $("div.surv_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
+    //localStorage.clear();
   });
 });
 
-document
-  .getElementById("1")
-  .querySelector(".tab_line")
-  .querySelector(".tabline")
-  .classList.add("tab_active");
-document
-  .getElementById("1")
-  .querySelector(".tab_line")
-  .querySelector(".tab_shape")
-  .classList.add("tab_active");
+$("#1").find(".tab_line").find(".tabline").addClass("tab_active");
 
-document.querySelectorAll(".tab_menu .tab").forEach(function (tab) {
-  tab.addEventListener("click", function () {
-    document
-      .querySelector(".tab_menu .tab_line .tab_shape.tab_active")
-      .classList.remove("tab_active");
-    document
-      .querySelector(".tab_menu .tab_line .tabline.tab_active")
-      .classList.remove("tab_active");
-    tab.querySelector(".tab_line .tabline").classList.add("tab_active");
-    tab.querySelector(".tab_line .tab_shape").classList.add("tab_active");
+$("#1").find(".tab_line").find(".tab_shape").addClass("tab_active");
+
+$(".tab_menu")
+  .find(".tab")
+  .on("click", function () {
+    $(".tab_menu")
+      .find(".tab_line")
+      .find(".tab_shape")
+      .removeClass("tab_active");
+    $(".tab_menu").find(".tab_line").find(".tabline").removeClass("tab_active");
+    $(this).find(".tab_line").find(".tabline").addClass("tab_active");
+    $(this).find(".tab_line").find(".tab_shape").addClass("tab_active");
+  });
+
+$(".tab_menu")
+  .find(".tab")
+  .on("mouseout", function () {
+    $(this).find(".tab_line").delay(0).animate(
+      {
+        opacity: "50",
+      },
+      { duration: 500, queue: true },
+      "linear"
+    );
+  });
+
+$(".tab_menu")
+  .find(".tab")
+  .on("mouseover", function () {
+    $(this).find(".tab_line").delay(0).animate(
+      {
+        opacity: "100",
+      },
+      { duration: 500, queue: true },
+      "linear"
+    );
+  });
+
+$("#one-one, #one-two, #one-three, #one-four").each(function () {
+  $(this).on("click", function () {
+    let answerOne = $(this).attr("data-answer");
+    localStorage.setItem("answerOne", answerOne);
+  });
+});
+$("#two-one, #two-two, #two-three, #two-four").each(function () {
+  $(this).on("click", function () {
+    let answerTwo = $(this).attr("data-answer");
+    localStorage.setItem("answerTwo", answerTwo);
+  });
+});
+$("#three-one, #three-two, #three-three, #three-four").each(function () {
+  $(this).on("click", function () {
+    let answerThree = $(this).attr("data-answer");
+    localStorage.setItem("answerThree", answerThree);
+  });
+});
+$("#four-one, #four-two, #four-three, #four-four").each(function () {
+  $(this).on("click", function () {
+    let answerFour = $(this).attr("data-answer");
+    localStorage.setItem("answerFour", answerFour);
   });
 });
 
-document.querySelectorAll(".tab_menu .tab").forEach(function (tab) {
-  tab.addEventListener("mouseout", function () {
-    tab.querySelector(".tab_line").style.opacity = "50";
+$("#five-one, #five-two, #five-three, #five-four").each(function () {
+  $(this).on("click", function () {
+    let answerFive = $(this).attr("data-answer");
+    localStorage.setItem("answerFive", answerFive);
   });
 });
 
-document.querySelectorAll(".tab_menu .tab").forEach(function (tab) {
-  tab.addEventListener("mouseover", function () {
-    tab.querySelector(".tab_line").style.opacity = "100";
+$("#six-one, #six-two, #six-three, #six-four").each(function () {
+  $(this).on("click", function () {
+    let answerSix = $(this).attr("data-answer");
+    localStorage.setItem("answerSix", answerSix);
   });
 });
 
-document
-  .querySelectorAll("#one-one, #one-two, #one-three, #one-four")
-  .forEach(function (el) {
-    el.addEventListener("click", function () {
-      let answerOne = el.getAttribute("data-answer");
-      localStorage.setItem("answerOne", answerOne);
-    });
-  });
-document
-  .querySelectorAll("#two-one, #two-two, #two-three, #two-four")
-  .forEach(function (el) {
-    el.addEventListener("click", function () {
-      let answerTwo = el.getAttribute("data-answer");
-      localStorage.setItem("answerTwo", answerTwo);
-    });
-  });
-document
-  .querySelectorAll("#three-one, #three-two, #three-three, #three-four")
-  .forEach(function (el) {
-    el.addEventListener("click", function () {
-      let answerThree = el.getAttribute("data-answer");
-      localStorage.setItem("answerThree", answerThree);
-    });
-  });
-document
-  .querySelectorAll("#four-one, #four-two, #four-three, #four-four")
-  .forEach(function (el) {
-    el.addEventListener("click", function () {
-      let answerFour = el.getAttribute("data-answer");
-      localStorage.setItem("answerFour", answerFour);
-    });
-  });
-
-document
-  .querySelectorAll("#five-one, #five-two, #five-three, #five-four")
-  .forEach(function (el) {
-    el.addEventListener("click", function () {
-      let answerFive = el.getAttribute("data-answer");
-      localStorage.setItem("answerFive", answerFive);
-    });
-  });
-
-document
-  .querySelectorAll("#six-one, #six-two, #six-three, #six-four")
-  .forEach(function (el) {
-    el.addEventListener("click", function () {
-      let answerSix = el.getAttribute("data-answer");
-      localStorage.setItem("answerSix", answerSix);
-    });
-  });
-
-document
-  .querySelectorAll("#seven-one, #seven-two, #seven-three, #seven-four")
-  .forEach(function (el) {
-    el.addEventListener("click", function () {
-      let answerSeven = el.getAttribute("data-answer");
-      localStorage.setItem("answerSeven", answerSeven);
-    });
-  });
-
-document
-  .querySelectorAll("#eight-one, #eight-two, #eight-three, #eight-four")
-  .forEach(function (el) {
-    el.addEventListener("click", function () {
-      let answerEight = el.getAttribute("data-answer");
-      localStorage.setItem("answerEight", answerEight);
-    });
-  });
-
-document
-  .querySelectorAll("#nine-one, #nine-two, #nine-three, #nine-four")
-  .forEach(function (el) {
-    el.addEventListener("click", function () {
-      let answerNine = el.getAttribute("data-answer");
-      localStorage.setItem("answerNine", answerNine);
-    });
-  });
-
-document
-  .querySelectorAll("#ten-one, #ten-two, #ten-three, #ten-four")
-  .forEach(function (el) {
-    el.addEventListener("click", function () {
-      let answerTen = el.getAttribute("data-answer");
-      let answerEleven = el.getAttribute("data-answer");
-      localStorage.setItem("answerTen", answerTen);
-      localStorage.setItem("answerEleven", answerEleven);
-    });
-  });
-
-document.querySelectorAll(".quiz-a").forEach(function (quizA) {
-  quizA.addEventListener("click", function () {
-    quizA.classList.add("selected");
-    quizA.parentNode
-      .querySelectorAll(".quiz-a")
-      .forEach(function (siblingQuizA) {
-        if (siblingQuizA !== quizA) {
-          siblingQuizA.classList.remove("selected");
-        }
-      });
+$("#seven-one, #seven-two, #seven-three, #seven-four").each(function () {
+  $(this).on("click", function () {
+    let answerSeven = $(this).attr("data-answer");
+    localStorage.setItem("answerSeven", answerSeven);
   });
 });
 
-document.querySelector(".check-answer").addEventListener("click", function () {
-  let answers = [
-    Number(localStorage.getItem("answerOne")),
-    Number(localStorage.getItem("answerTwo")),
-    Number(localStorage.getItem("answerThree")),
-    Number(localStorage.getItem("answerFour")),
-    Number(localStorage.getItem("answerFive")),
-    Number(localStorage.getItem("answerSix")),
-    Number(localStorage.getItem("answerSeven")),
-    Number(localStorage.getItem("answerEight")),
-    Number(localStorage.getItem("answerNine")),
-    Number(localStorage.getItem("answerTen")),
-    Number(localStorage.getItem("answerEleven")),
+$("#eight-one, #eight-two, #eight-three, #eight-four").each(function () {
+  $(this).on("click", function () {
+    let answerEight = $(this).attr("data-answer");
+    localStorage.setItem("answerEight", answerEight);
+  });
+});
+
+$("#nine-one, #nine-two, #nine-three, #nine-four").each(function () {
+  $(this).on("click", function () {
+    let answerNine = $(this).attr("data-answer");
+    localStorage.setItem("answerNine", answerNine);
+  });
+});
+
+$("#ten-one, #ten-two, #ten-three, #ten-four").each(function () {
+  $(this).on("click", function () {
+    let answerTen = $(this).attr("data-answer");
+    let answerEleven = $(this).attr("data-answer");
+    localStorage.setItem("answerTen", answerTen);
+    localStorage.setItem("answerEleven", answerEleven);
+  });
+});
+
+$(".quiz-a").on("click", function () {
+  $(this).addClass("selected");
+  $(this).siblings(".quiz-a").removeClass("selected");
+});
+/*
+$(".close-quiz").on("click", function () {
+  $(".quiz-wrapper").addClass("hidden");
+  $(".quiz-wrapper").removeClass("show");
+  $(".quiz-wrapper").find(".quiz-a").removeClass("selected");
+  localStorage.clear();
+});
+*/
+$(".btn-quiz-open.nomargin").on("click", function () {
+  $(".quiz-wrapper").removeClass("hidden");
+  $(".quiz-wrapper").addClass("show");
+  $(".answer-value").addClass("hidden");
+  $(".answer-value").removeClass("show");
+});
+
+$(".check-answer").on("click", function () {
+  //Array of numbers
+  let answerOne = Number(localStorage.getItem("answerOne"));
+  let answerTwo = Number(localStorage.getItem("answerTwo"));
+  let answerThree = Number(localStorage.getItem("answerThree"));
+  let answerFour = Number(localStorage.getItem("answerFour"));
+
+  let answerFive = Number(localStorage.getItem("answerFive"));
+  let answerSix = Number(localStorage.getItem("answerSix"));
+  let answerSeven = Number(localStorage.getItem("answerSeven"));
+  let answerEight = Number(localStorage.getItem("answerEight"));
+  let answerNine = Number(localStorage.getItem("answerNine"));
+  let answerTen = Number(localStorage.getItem("answerTen"));
+  let answerEleven = Number(localStorage.getItem("answerEleven"));
+
+  var numbers = [
+    answerOne,
+    answerTwo,
+    answerThree,
+    answerFour,
+    answerFive,
+    answerSix,
+    answerSeven,
+    answerEight,
+    answerNine,
+    answerTen,
+    answerEleven,
   ];
 
+  //Function to calculate the average
   function mostFrequent(arr) {
     var counts = { 1: 0, 2: 0, 3: 0, 4: 0 };
     var maxKey = 1;
@@ -263,43 +258,72 @@ document.querySelector(".check-answer").addEventListener("click", function () {
     return maxKey;
   }
 
-  var mostFrequentNumber = mostFrequent(answers);
+  //Get the average of the numbers array
+  var mostFrequentNumber = mostFrequent(numbers);
 
+  //Round the average to the nearest whole number
+
+  //Create a copy based on the rounded average value
   var copy;
   switch (mostFrequentNumber) {
     case 1:
       copy = "Hedonists";
-      document.querySelector(".answer-value").textContent = copy;
-      document.querySelector(".answer-logo").classList.add("hedo");
-      document
-        .querySelector(".answer-logo")
-        .classList.remove("techno", "nomads", "barba");
+      $(".answer-value").text(copy);
+      $(".answer-logo").addClass("hedo");
+      $(".answer-logo").removeClass("techno");
+      $(".answer-logo").removeClass("nomads");
+      $(".answer-logo").removeClass("barba");
       break;
     case 2:
       copy = "Barbarians";
-      document.querySelector(".answer-value").textContent = copy;
-      document.querySelector(".answer-logo").classList.add("barba");
-      document
-        .querySelector(".answer-logo")
-        .classList.remove("techno", "nomads", "hedo");
+      $(".answer-value").text(copy);
+      $(".answer-logo").addClass("barba");
+      $(".answer-logo").removeClass("techno");
+      $(".answer-logo").removeClass("nomads");
+      $(".answer-logo").removeClass("hedo");
+
       break;
     case 3:
       copy = "Nomads";
-      document.querySelector(".answer-value").textContent = copy;
-      document.querySelector(".answer-logo").classList.add("nomads");
-      document
-        .querySelector(".answer-logo")
-        .classList.remove("techno", "barba", "hedo");
+      $(".answer-value").text(copy);
+      $(".answer-logo").addClass("nomads");
+      $(".answer-logo").removeClass("techno");
+      $(".answer-logo").removeClass("barba");
+      $(".answer-logo").removeClass("hedo");
+
       break;
     case 4:
       copy = "Technognostics";
-      document.querySelector(".answer-value").textContent = copy;
-      document.querySelector(".answer-logo").classList.add("techno");
-      document
-        .querySelector(".answer-logo")
-        .classList.remove("nomads", "barba", "hedo");
+      $(".answer-value").text(copy);
+      $(".answer-logo").addClass("techno");
+      $(".answer-logo").removeClass("nomads");
+      $(".answer-logo").removeClass("barba");
+      $(".answer-logo").removeClass("hedo");
+
       break;
     default:
       copy = "Average is out of range.";
   }
+
+  //Use jQuery to display the copy in an element with the id "result"
+});
+/*
+$(".reset-quiz").on("click", function () {
+  $(".quiz-wrapper").find(".quiz-a").removeClass("selected");
+  $("div.surv_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
+  localStorage.clear();
+});
+*/
+
+var Webflow = Webflow || [];
+Webflow.push(function () {
+  var l = $("#quiz-slider .w-slider-arrow-left");
+  var r = $("#quiz-slider .quiz-right-arrow");
+  $("#quiz-slider")
+    .on("click", ".back-button", function () {
+      l.trigger("tap");
+    })
+    .on("click", ".quiz-a", function () {
+      r.trigger("tap");
+    });
 });
