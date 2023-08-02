@@ -1,27 +1,35 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Helper function to check if an element exists before adding an event listener
+  function addClickListener(elementId, callback) {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.addEventListener("click", callback);
+    }
+  }
+
   // FACTIONS NAV
-  document.getElementById("1").addEventListener("click", function (e) {
+  addClickListener("1", function (e) {
     e.preventDefault();
     document
       .querySelector("div.factions_slider_nav.w-slider-nav div:nth-child(1)")
       .dispatchEvent(new Event("tap"));
   });
 
-  document.getElementById("2").addEventListener("click", function (e) {
+  addClickListener("2", function (e) {
     e.preventDefault();
     document
       .querySelector("div.factions_slider_nav.w-slider-nav div:nth-child(2)")
       .dispatchEvent(new Event("tap"));
   });
 
-  document.getElementById("3").addEventListener("click", function (e) {
+  addClickListener("3", function (e) {
     e.preventDefault();
     document
       .querySelector("div.factions_slider_nav.w-slider-nav div:nth-child(3)")
       .dispatchEvent(new Event("tap"));
   });
 
-  document.getElementById("4").addEventListener("click", function (e) {
+  addClickListener("4", function (e) {
     e.preventDefault();
     document
       .querySelector("div.factions_slider_nav.w-slider-nav div:nth-child(4)")
@@ -54,14 +62,12 @@ document.addEventListener("DOMContentLoaded", function () {
       "ten",
     ];
     questionIds.forEach(function (questionId) {
-      document
-        .getElementById(`${questionId}-${i}`)
-        .addEventListener("click", triggerQuizNav(i + 1));
+      addClickListener(`${questionId}-${i}`, triggerQuizNav(i + 1));
     });
   }
 
   // Handling quiz reset
-  document.getElementById("reset_quiz").addEventListener("click", function (e) {
+  addClickListener("reset_quiz", function (e) {
     e.preventDefault();
     const firstSlide = document.querySelector(
       "div.surv_slider_nav.w-slider-nav div:nth-child(1)"
