@@ -1,4 +1,4 @@
-//v4
+//v5
 
 $(document).ready(function () {
   // FACTIONS NAV
@@ -189,6 +189,97 @@ $("#ten-one, #ten-two, #ten-three, #ten-four").each(function () {
     let answerEleven = $(this).attr("data-answer");
     localStorage.setItem("answerTen", answerTen);
     localStorage.setItem("answerEleven", answerEleven);
+    //Array of numbers
+    let answerOne = Number(localStorage.getItem("answerOne"));
+    let answerTwo = Number(localStorage.getItem("answerTwo"));
+    let answerThree = Number(localStorage.getItem("answerThree"));
+    let answerFour = Number(localStorage.getItem("answerFour"));
+
+    let answerFive = Number(localStorage.getItem("answerFive"));
+    let answerSix = Number(localStorage.getItem("answerSix"));
+    let answerSeven = Number(localStorage.getItem("answerSeven"));
+    let answerEight = Number(localStorage.getItem("answerEight"));
+    let answerNine = Number(localStorage.getItem("answerNine"));
+    let answerTen = Number(localStorage.getItem("answerTen"));
+    let answerEleven = Number(localStorage.getItem("answerEleven"));
+
+    var numbers = [
+      answerOne,
+      answerTwo,
+      answerThree,
+      answerFour,
+      answerFive,
+      answerSix,
+      answerSeven,
+      answerEight,
+      answerNine,
+      answerTen,
+      answerEleven,
+    ];
+
+    //Function to calculate the average
+    function mostFrequent(arr) {
+      var counts = { 1: 0, 2: 0, 3: 0, 4: 0 };
+      var maxKey = 1;
+
+      for (var i = 0; i < arr.length; i++) {
+        var key = arr[i];
+        if (key >= 1 && key <= 4) {
+          counts[key]++;
+          if (counts[key] > counts[maxKey]) {
+            maxKey = key;
+          }
+        }
+      }
+      return maxKey;
+    }
+
+    //Get the average of the numbers array
+    var mostFrequentNumber = mostFrequent(numbers);
+
+    //Round the average to the nearest whole number
+
+    //Create a copy based on the rounded average value
+    var copy;
+    switch (mostFrequentNumber) {
+      case 1:
+        copy = "Hedonists";
+        $(".answer-value").text(copy);
+        $(".answer-logo").addClass("hedo");
+        $(".answer-logo").removeClass("techno");
+        $(".answer-logo").removeClass("nomads");
+        $(".answer-logo").removeClass("barba");
+        break;
+      case 2:
+        copy = "Barbarians";
+        $(".answer-value").text(copy);
+        $(".answer-logo").addClass("barba");
+        $(".answer-logo").removeClass("techno");
+        $(".answer-logo").removeClass("nomads");
+        $(".answer-logo").removeClass("hedo");
+
+        break;
+      case 3:
+        copy = "Nomads";
+        $(".answer-value").text(copy);
+        $(".answer-logo").addClass("nomads");
+        $(".answer-logo").removeClass("techno");
+        $(".answer-logo").removeClass("barba");
+        $(".answer-logo").removeClass("hedo");
+
+        break;
+      case 4:
+        copy = "Technognostics";
+        $(".answer-value").text(copy);
+        $(".answer-logo").addClass("techno");
+        $(".answer-logo").removeClass("nomads");
+        $(".answer-logo").removeClass("barba");
+        $(".answer-logo").removeClass("hedo");
+
+        break;
+      default:
+        copy = "Average is out of range.";
+    }
   });
 });
 
@@ -211,7 +302,7 @@ $(".btn-quiz-open.nomargin").on("click", function () {
   $(".answer-value").removeClass("show");
 });
 
-$(".check-answer").on("click", function () {
+$("#ten-one, #ten-two, #ten-three, #ten-four").on("click", function () {
   //Array of numbers
   let answerOne = Number(localStorage.getItem("answerOne"));
   let answerTwo = Number(localStorage.getItem("answerTwo"));
