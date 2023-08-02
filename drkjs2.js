@@ -1,226 +1,328 @@
-//NEW
-
 document.addEventListener("DOMContentLoaded", function () {
-  function addClickListener(elementId, callback) {
-    const element = document.getElementById(elementId);
-    if (!element) {
-      console.error(`Element with ID '${elementId}' not found in the DOM.`);
-      return;
-    }
-
-    element.addEventListener("click", callback);
-  }
-
   // FACTIONS NAV
-  for (let i = 1; i <= 4; i++) {
-    addClickListener(i.toString(), function (e) {
-      e.preventDefault();
-      document
-        .querySelector(
-          `div.factions_slider_nav.w-slider-nav div:nth-child(${i})`
-        )
-        .dispatchEvent(new Event("tap"));
-    });
-  }
+  document.getElementById("1").addEventListener("click", function (e) {
+    e.preventDefault();
+    document
+      .querySelector("div.factions_slider_nav.w-slider-nav div:nth-child(1)")
+      .dispatchEvent(new Event("tap"));
+  });
+  document.getElementById("2").addEventListener("click", function (e) {
+    e.preventDefault();
+    document
+      .querySelector("div.factions_slider_nav.w-slider-nav div:nth-child(2)")
+      .dispatchEvent(new Event("tap"));
+  });
+  document.getElementById("3").addEventListener("click", function (e) {
+    e.preventDefault();
+    document
+      .querySelector("div.factions_slider_nav.w-slider-nav div:nth-child(3)")
+      .dispatchEvent(new Event("tap"));
+  });
+  document.getElementById("4").addEventListener("click", function (e) {
+    e.preventDefault();
+    document
+      .querySelector("div.factions_slider_nav.w-slider-nav div:nth-child(4)")
+      .dispatchEvent(new Event("tap"));
+  });
 
-  // QUIZ NAV
-  for (let i = 1; i <= 10; i++) {
-    addClickListener(`one-${i}`, function (e) {
-      e.preventDefault();
-      document
-        .querySelector(
-          `div.surv_slider_nav.w-slider-nav div:nth-child(${i + 1})`
-        )
-        .dispatchEvent(new Event("tap"));
-    });
-  }
+  //QUIZ NAV
+  const quizNavClickHandler = function (e) {
+    e.preventDefault();
+    document
+      .querySelector("div.surv_slider_nav.w-slider-nav div:nth-child(2)")
+      .dispatchEvent(new Event("tap"));
+  };
 
-  addClickListener("reset_quiz", function (e) {
+  document
+    .querySelectorAll("#one-one, #one-two, #one-three, #one-four")
+    .forEach(function (el) {
+      el.addEventListener("click", quizNavClickHandler);
+    });
+  document
+    .querySelectorAll("#two-one, #two-two, #two-three, #two-four")
+    .forEach(function (el) {
+      el.addEventListener("click", quizNavClickHandler);
+    });
+  document
+    .querySelectorAll("#three-one, #three-two, #three-three, #three-four")
+    .forEach(function (el) {
+      el.addEventListener("click", quizNavClickHandler);
+    });
+  document
+    .querySelectorAll("#four-one, #four-two, #four-three, #four-four")
+    .forEach(function (el) {
+      el.addEventListener("click", quizNavClickHandler);
+    });
+  document
+    .querySelectorAll("#five-one, #five-two, #five-three, #five-four")
+    .forEach(function (el) {
+      el.addEventListener("click", quizNavClickHandler);
+    });
+  document
+    .querySelectorAll("#six-one, #six-two, #six-three, #six-four")
+    .forEach(function (el) {
+      el.addEventListener("click", quizNavClickHandler);
+    });
+  document
+    .querySelectorAll("#seven-one, #seven-two, #seven-three, #seven-four")
+    .forEach(function (el) {
+      el.addEventListener("click", quizNavClickHandler);
+    });
+  document
+    .querySelectorAll("#eight-one, #eight-two, #eight-three, #eight-four")
+    .forEach(function (el) {
+      el.addEventListener("click", quizNavClickHandler);
+    });
+  document
+    .querySelectorAll("#nine-one, #nine-two, #nine-three, #nine-four")
+    .forEach(function (el) {
+      el.addEventListener("click", quizNavClickHandler);
+    });
+  document
+    .querySelectorAll("#ten-one, #ten-two, #ten-three, #ten-four")
+    .forEach(function (el) {
+      el.addEventListener("click", quizNavClickHandler);
+    });
+
+  document.getElementById("reset_quiz").addEventListener("click", function (e) {
     e.preventDefault();
     document
       .querySelector("div.surv_slider_nav.w-slider-nav div:nth-child(1)")
       .dispatchEvent(new Event("tap"));
+  });
+});
 
-    // Clear selected class from all quiz answers
-    const quizAnswers = document.querySelectorAll(".quiz-a");
-    quizAnswers.forEach((answer) => {
-      answer.classList.remove("selected");
+document
+  .getElementById("1")
+  .querySelector(".tab_line")
+  .querySelector(".tabline")
+  .classList.add("tab_active");
+document
+  .getElementById("1")
+  .querySelector(".tab_line")
+  .querySelector(".tab_shape")
+  .classList.add("tab_active");
+
+document.querySelectorAll(".tab_menu .tab").forEach(function (tab) {
+  tab.addEventListener("click", function () {
+    document
+      .querySelector(".tab_menu .tab_line .tab_shape.tab_active")
+      .classList.remove("tab_active");
+    document
+      .querySelector(".tab_menu .tab_line .tabline.tab_active")
+      .classList.remove("tab_active");
+    tab.querySelector(".tab_line .tabline").classList.add("tab_active");
+    tab.querySelector(".tab_line .tab_shape").classList.add("tab_active");
+  });
+});
+
+document.querySelectorAll(".tab_menu .tab").forEach(function (tab) {
+  tab.addEventListener("mouseout", function () {
+    tab.querySelector(".tab_line").style.opacity = "50";
+  });
+});
+
+document.querySelectorAll(".tab_menu .tab").forEach(function (tab) {
+  tab.addEventListener("mouseover", function () {
+    tab.querySelector(".tab_line").style.opacity = "100";
+  });
+});
+
+document
+  .querySelectorAll("#one-one, #one-two, #one-three, #one-four")
+  .forEach(function (el) {
+    el.addEventListener("click", function () {
+      let answerOne = el.getAttribute("data-answer");
+      localStorage.setItem("answerOne", answerOne);
     });
-
-    // Clear localStorage
-    localStorage.clear();
+  });
+document
+  .querySelectorAll("#two-one, #two-two, #two-three, #two-four")
+  .forEach(function (el) {
+    el.addEventListener("click", function () {
+      let answerTwo = el.getAttribute("data-answer");
+      localStorage.setItem("answerTwo", answerTwo);
+    });
+  });
+document
+  .querySelectorAll("#three-one, #three-two, #three-three, #three-four")
+  .forEach(function (el) {
+    el.addEventListener("click", function () {
+      let answerThree = el.getAttribute("data-answer");
+      localStorage.setItem("answerThree", answerThree);
+    });
+  });
+document
+  .querySelectorAll("#four-one, #four-two, #four-three, #four-four")
+  .forEach(function (el) {
+    el.addEventListener("click", function () {
+      let answerFour = el.getAttribute("data-answer");
+      localStorage.setItem("answerFour", answerFour);
+    });
   });
 
-  // Setting "tab_active" class on element with ID "1"
-  document
-    .getElementById("1")
-    .querySelector(".tab_line .tabline")
-    .classList.add("tab_active");
-  document
-    .getElementById("1")
-    .querySelector(".tab_line .tab_shape")
-    .classList.add("tab_active");
-
-  // Handling tab menu clicks
-  const tabMenus = document.querySelectorAll(".tab_menu .tab");
-  tabMenus.forEach(function (tab) {
-    tab.addEventListener("click", function () {
-      document
-        .querySelectorAll(".tab_menu .tab_line .tab_shape")
-        .forEach(function (el) {
-          el.classList.remove("tab_active");
-        });
-      document
-        .querySelectorAll(".tab_menu .tab_line .tabline")
-        .forEach(function (el) {
-          el.classList.remove("tab_active");
-        });
-      tab.querySelector(".tab_line .tabline").classList.add("tab_active");
-      tab.querySelector(".tab_line .tab_shape").classList.add("tab_active");
-    });
-
-    tab.addEventListener("mouseout", function () {
-      tab.querySelector(".tab_line").style.opacity = "0.5";
-    });
-
-    tab.addEventListener("mouseover", function () {
-      tab.querySelector(".tab_line").style.opacity = "1";
+document
+  .querySelectorAll("#five-one, #five-two, #five-three, #five-four")
+  .forEach(function (el) {
+    el.addEventListener("click", function () {
+      let answerFive = el.getAttribute("data-answer");
+      localStorage.setItem("answerFive", answerFive);
     });
   });
 
-  // Saving quiz answers to localStorage
-  function saveQuizAnswer(element, answerName) {
-    element.addEventListener("click", function () {
-      const answer = element.getAttribute("data-answer");
-      localStorage.setItem(answerName, answer);
+document
+  .querySelectorAll("#six-one, #six-two, #six-three, #six-four")
+  .forEach(function (el) {
+    el.addEventListener("click", function () {
+      let answerSix = el.getAttribute("data-answer");
+      localStorage.setItem("answerSix", answerSix);
     });
-  }
+  });
 
-  const quizQuestions = [
-    { questionIds: ["one", "two", "three", "four"] },
-    { questionIds: ["five", "six", "seven", "eight", "nine", "ten"] },
+document
+  .querySelectorAll("#seven-one, #seven-two, #seven-three, #seven-four")
+  .forEach(function (el) {
+    el.addEventListener("click", function () {
+      let answerSeven = el.getAttribute("data-answer");
+      localStorage.setItem("answerSeven", answerSeven);
+    });
+  });
+
+document
+  .querySelectorAll("#eight-one, #eight-two, #eight-three, #eight-four")
+  .forEach(function (el) {
+    el.addEventListener("click", function () {
+      let answerEight = el.getAttribute("data-answer");
+      localStorage.setItem("answerEight", answerEight);
+    });
+  });
+
+document
+  .querySelectorAll("#nine-one, #nine-two, #nine-three, #nine-four")
+  .forEach(function (el) {
+    el.addEventListener("click", function () {
+      let answerNine = el.getAttribute("data-answer");
+      localStorage.setItem("answerNine", answerNine);
+    });
+  });
+
+document
+  .querySelectorAll("#ten-one, #ten-two, #ten-three, #ten-four")
+  .forEach(function (el) {
+    el.addEventListener("click", function () {
+      let answerTen = el.getAttribute("data-answer");
+      let answerEleven = el.getAttribute("data-answer");
+      localStorage.setItem("answerTen", answerTen);
+      localStorage.setItem("answerEleven", answerEleven);
+    });
+  });
+
+document.querySelectorAll(".quiz-a").forEach(function (quizA) {
+  quizA.addEventListener("click", function () {
+    quizA.classList.add("selected");
+    quizA.parentNode
+      .querySelectorAll(".quiz-a")
+      .forEach(function (siblingQuizA) {
+        if (siblingQuizA !== quizA) {
+          siblingQuizA.classList.remove("selected");
+        }
+      });
+  });
+});
+
+document
+  .querySelector(".btn-quiz-open.nomargin")
+  .addEventListener("click", function () {
+    document.querySelector(".quiz-wrapper").classList.remove("hidden");
+    document.querySelector(".quiz-wrapper").classList.add("show");
+    document.querySelector(".answer-value").classList.add("hidden");
+    document.querySelector(".answer-value").classList.remove("show");
+  });
+
+document.querySelector(".check-answer").addEventListener("click", function () {
+  let answers = [
+    Number(localStorage.getItem("answerOne")),
+    Number(localStorage.getItem("answerTwo")),
+    Number(localStorage.getItem("answerThree")),
+    Number(localStorage.getItem("answerFour")),
+    Number(localStorage.getItem("answerFive")),
+    Number(localStorage.getItem("answerSix")),
+    Number(localStorage.getItem("answerSeven")),
+    Number(localStorage.getItem("answerEight")),
+    Number(localStorage.getItem("answerNine")),
+    Number(localStorage.getItem("answerTen")),
+    Number(localStorage.getItem("answerEleven")),
   ];
 
-  quizQuestions.forEach(function (questionSet, index) {
-    const answerName = `answer${index + 1}`;
-    questionSet.questionIds.forEach(function (questionId) {
-      for (let i = 1; i <= 4; i++) {
-        const elements = document.querySelectorAll(`#${questionId}-${i}`);
-        elements.forEach(function (element) {
-          saveQuizAnswer(element, answerName);
-        });
-      }
-    });
-  });
+  function mostFrequent(arr) {
+    var counts = { 1: 0, 2: 0, 3: 0, 4: 0 };
+    var maxKey = 1;
 
-  // Handling "selected" class on quiz answers
-  const quizAnswers = document.querySelectorAll(".quiz-a");
-  quizAnswers.forEach(function (answer) {
-    answer.addEventListener("click", function () {
-      this.classList.add("selected");
-      const siblings = Array.from(this.parentNode.children).filter(
-        (el) => el !== this
-      );
-      siblings.forEach(function (sibling) {
-        sibling.classList.remove("selected");
-      });
-    });
-  });
-
-  // Handling quiz open and check-answer buttons
-  document
-    .querySelector(".btn-quiz-open.nomargin")
-    .addEventListener("click", function () {
-      document.querySelector(".quiz-wrapper").classList.remove("hidden");
-      document.querySelector(".quiz-wrapper").classList.add("show");
-      document.querySelectorAll(".answer-value").forEach(function (el) {
-        el.classList.add("hidden");
-        el.classList.remove("show");
-      });
-    });
-
-  document
-    .querySelector(".check-answer")
-    .addEventListener("click", function () {
-      // Array of numbers
-      const answers = [
-        Number(localStorage.getItem("answer1")),
-        Number(localStorage.getItem("answer2")),
-        Number(localStorage.getItem("answer3")),
-        Number(localStorage.getItem("answer4")),
-        Number(localStorage.getItem("answer5")),
-        Number(localStorage.getItem("answer6")),
-        Number(localStorage.getItem("answer7")),
-        Number(localStorage.getItem("answer8")),
-        Number(localStorage.getItem("answer9")),
-        Number(localStorage.getItem("answer10")),
-      ];
-
-      // Function to calculate the most frequent number in the array
-      function mostFrequent(arr) {
-        const counts = { 1: 0, 2: 0, 3: 0, 4: 0 };
-        let maxKey = 1;
-
-        for (let i = 0; i < arr.length; i++) {
-          const key = arr[i];
-          if (key >= 1 && key <= 4) {
-            counts[key]++;
-            if (counts[key] > counts[maxKey]) {
-              maxKey = key;
-            }
-          }
+    for (var i = 0; i < arr.length; i++) {
+      var key = arr[i];
+      if (key >= 1 && key <= 4) {
+        counts[key]++;
+        if (counts[key] > counts[maxKey]) {
+          maxKey = key;
         }
-        return maxKey;
       }
+    }
+    return maxKey;
+  }
 
-      // Get the most frequent number from the answers array
-      const mostFrequentNumber = mostFrequent(answers);
+  var mostFrequentNumber = mostFrequent(answers);
 
-      // Set the appropriate copy and class based on the most frequent number
-      let copy;
-      switch (mostFrequentNumber) {
-        case 1:
-          copy = "Hedonists";
-          document.querySelectorAll(".answer-value").forEach(function (el) {
-            el.textContent = copy;
-          });
-          document.querySelector(".answer-logo").classList.add("hedo");
-          document
-            .querySelector(".answer-logo")
-            .classList.remove("techno", "nomads", "barba");
-          break;
-        case 2:
-          copy = "Barbarians";
-          document.querySelectorAll(".answer-value").forEach(function (el) {
-            el.textContent = copy;
-          });
-          document.querySelector(".answer-logo").classList.add("barba");
-          document
-            .querySelector(".answer-logo")
-            .classList.remove("techno", "nomads", "hedo");
-          break;
-        case 3:
-          copy = "Nomads";
-          document.querySelectorAll(".answer-value").forEach(function (el) {
-            el.textContent = copy;
-          });
-          document.querySelector(".answer-logo").classList.add("nomads");
-          document
-            .querySelector(".answer-logo")
-            .classList.remove("techno", "barba", "hedo");
-          break;
-        case 4:
-          copy = "Technognostics";
-          document.querySelectorAll(".answer-value").forEach(function (el) {
-            el.textContent = copy;
-          });
-          document.querySelector(".answer-logo").classList.add("techno");
-          document
-            .querySelector(".answer-logo")
-            .classList.remove("nomads", "barba", "hedo");
-          break;
-        default:
-          copy = "Average is out of range.";
+  var copy;
+  switch (mostFrequentNumber) {
+    case 1:
+      copy = "Hedonists";
+      document.querySelector(".answer-value").textContent = copy;
+      document.querySelector(".answer-logo").classList.add("hedo");
+      document
+        .querySelector(".answer-logo")
+        .classList.remove("techno", "nomads", "barba");
+      break;
+    case 2:
+      copy = "Barbarians";
+      document.querySelector(".answer-value").textContent = copy;
+      document.querySelector(".answer-logo").classList.add("barba");
+      document
+        .querySelector(".answer-logo")
+        .classList.remove("techno", "nomads", "hedo");
+      break;
+    case 3:
+      copy = "Nomads";
+      document.querySelector(".answer-value").textContent = copy;
+      document.querySelector(".answer-logo").classList.add("nomads");
+      document
+        .querySelector(".answer-logo")
+        .classList.remove("techno", "barba", "hedo");
+      break;
+    case 4:
+      copy = "Technognostics";
+      document.querySelector(".answer-value").textContent = copy;
+      document.querySelector(".answer-logo").classList.add("techno");
+      document
+        .querySelector(".answer-logo")
+        .classList.remove("nomads", "barba", "hedo");
+      break;
+    default:
+      copy = "Average is out of range.";
+  }
+});
+
+var Webflow = Webflow || [];
+Webflow.push(function () {
+  var l = document.querySelector("#quiz-slider .w-slider-arrow-left");
+  var r = document.querySelector("#quiz-slider .quiz-right-arrow");
+
+  document
+    .querySelector("#quiz-slider")
+    .addEventListener("click", function (e) {
+      if (e.target.classList.contains("back-button")) {
+        l.dispatchEvent(new Event("tap"));
+      } else if (e.target.classList.contains("quiz-a")) {
+        r.dispatchEvent(new Event("tap"));
       }
     });
 });
