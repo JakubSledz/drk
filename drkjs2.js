@@ -1,4 +1,4 @@
-//v8
+//v9
 
 $(document).ready(function () {
   // FACTIONS NAV
@@ -210,7 +210,7 @@ $(".btn-quiz-open.nomargin").on("click", function () {
   $(".answer-value").removeClass("show");
 });
 
-$(".check-answer").on("click", function () {
+$(".check-answer").on("click", function (e) {
   //Array of numbers
   let answerOne = Number(localStorage.getItem("answerOne"));
   let answerTwo = Number(localStorage.getItem("answerTwo"));
