@@ -1,4 +1,4 @@
-//v7
+//v8
 
 $(document).ready(function () {
   // FACTIONS NAV
@@ -302,6 +302,9 @@ $(".check-answer").on("click", function () {
     default:
       copy = "Average is out of range.";
   }
+  e.preventDefault();
+  //$('.w-slider-nav:nth-child(1)').trigger('tap');
+  $("div.surv_slider_nav.w-slider-nav div:nth-child(12)").trigger("tap");
 
   //Use jQuery to display the copy in an element with the id "result"
 });
