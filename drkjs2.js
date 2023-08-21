@@ -94,6 +94,7 @@ $(".tab_menu")
       .find(".tab_line")
       .find(".tab_shape")
       .removeClass("tab_active techno");
+
     $(".tab_menu")
       .find(".tab_line")
       .find(".tabline")
