@@ -140,6 +140,15 @@ $(".tab_menu")
 
 $(".tab_menu")
   .find(".tab")
+  .on("mouseenter", function () {
+    $(this).find(".tab_line").css("opacity", "0.5");
+  })
+  .on("mouseleave", function () {
+    $(this).find(".tab_line").css("opacity", "1");
+  });
+/*
+$(".tab_menu")
+  .find(".tab")
   .on("mouseout", function () {
     $(this).find(".tab_line").delay(0).animate(
       {
@@ -161,7 +170,7 @@ $(".tab_menu")
       "linear"
     );
   });
-
+*/
 $("#one-one, #one-two, #one-three, #one-four").each(function () {
   $(this).on("click", function () {
     let answerOne = $(this).attr("data-answer");
