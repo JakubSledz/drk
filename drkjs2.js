@@ -93,8 +93,11 @@ $(".tab_menu")
     $(".tab_menu")
       .find(".tab_line")
       .find(".tab_shape")
-      .removeClass("tab_active");
-    $(".tab_menu").find(".tab_line").find(".tabline").removeClass("tab_active");
+      .removeClass("tab_active techno");
+    $(".tab_menu")
+      .find(".tab_line")
+      .find(".tabline")
+      .removeClass("tab_active nomads");
     $(this).find(".tab_line").find(".tabline").addClass("tab_active");
     $(this).find(".tab_line").find(".tab_shape").addClass("tab_active");
   });
