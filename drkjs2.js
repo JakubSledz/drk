@@ -84,23 +84,32 @@ $(document).ready(function () {
 });
 
 $("#1").find(".tab_line").find(".tabline").addClass("tab_active");
+$("#1").find(".tab_line").find(".tabline").removeClassClass("techno");
 
 $("#1").find(".tab_line").find(".tab_shape").addClass("tab_active");
+$("#1").find(".tab_line").find(".tab_shape").removeClassClass("techno");
 
 $(".tab_menu")
   .find(".tab")
   .on("click", function () {
-    $(".tab_menu")
-      .find(".tab_line")
-      .find(".tab_shape")
-      .removeClass("tab_active techno");
+    var $this = $(this); // store reference to current clicked tab
 
-    $(".tab_menu")
-      .find(".tab_line")
-      .find(".tabline")
-      .removeClass("tab_active nomads");
-    $(this).find(".tab_line").find(".tabline").addClass("tab_active");
-    $(this).find(".tab_line").find(".tab_shape").addClass("tab_active");
+    // remove 'tab_active' class from all tabs and add respective classes
+    $("#1").removeClass("tab_active").addClass("techno");
+    $("#2").removeClass("tab_active").addClass("hedonists");
+    $("#3").removeClass("tab_active").addClass("barbarians");
+    $("#4").removeClass("tab_active").addClass("nomads");
+
+    // now add 'tab_active' class to current tab and remove its respective class
+    if ($this.attr("id") === "1") {
+      $this.addClass("tab_active").removeClass("techno");
+    } else if ($this.attr("id") === "2") {
+      $this.addClass("tab_active").removeClass("hedonists");
+    } else if ($this.attr("id") === "3") {
+      $this.addClass("tab_active").removeClass("barbarians");
+    } else if ($this.attr("id") === "4") {
+      $this.addClass("tab_active").removeClass("nomads");
+    }
   });
 
 $(".tab_menu")
