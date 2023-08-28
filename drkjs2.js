@@ -13,6 +13,13 @@ $(document).ready(function () {
     $("div.techno_slider_nav.w-slider-nav div:nth-child(2)").trigger("tap");
   });
 
+  $("#techno_slider_elements")
+    .children()
+    .each(function () {
+      if ($(this).hasClass("aria-hidden")) {
+        $(this).css("height", "0px");
+      }
+    });
   // FACTIONS NAV
   $("#1").click(function (e) {
     e.preventDefault();
