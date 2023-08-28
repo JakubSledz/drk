@@ -33,6 +33,22 @@ $(document).ready(function () {
     $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
   });
 
+  //BARB NAV
+  $("#barb_description").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.barb_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
+    $("#barb_introduction").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
+  });
+  $("#barb_introduction").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.barb_slider_nav.w-slider-nav div:nth-child(2)").trigger("tap");
+    $("#barb_description").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
+  });
+
   // FACTIONS NAV
   $("#1").click(function (e) {
     e.preventDefault();
