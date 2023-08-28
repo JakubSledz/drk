@@ -16,7 +16,7 @@ $(document).ready(function () {
   $("#techno_slider_elements")
     .children()
     .each(function () {
-      if ($(this).hasClass("aria-hidden")) {
+      if ($(this).attr("aria-hidden") === "true") {
         $(this).css("height", "0px");
       }
     });
