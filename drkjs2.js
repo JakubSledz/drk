@@ -49,6 +49,22 @@ $(document).ready(function () {
     $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
   });
 
+  //NOMADS NAV
+  $("#nomads_description").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.nomads_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
+    $("#nomads_introduction").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
+  });
+  $("#nomads_introduction").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.nomads_slider_nav.w-slider-nav div:nth-child(2)").trigger("tap");
+    $("#nomads_description").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
+  });
+
   // FACTIONS NAV
   $("#1, #2, #3, #4").on("click", function () {
     $('.w-slide[aria-hidden="true"]').each(function () {
