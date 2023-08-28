@@ -1,6 +1,18 @@
 //v9
 
 $(document).ready(function () {
+  //TECHNO NAV
+  $("#techno_description").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.techno_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
+  });
+  $("#techno_introduction").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.techno_slider_nav.w-slider-nav div:nth-child(2)").trigger("tap");
+  });
+
   // FACTIONS NAV
   $("#1").click(function (e) {
     e.preventDefault();
