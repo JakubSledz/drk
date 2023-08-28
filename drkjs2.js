@@ -14,7 +14,7 @@ $(document).ready(function () {
     //$('.w-slider-nav:nth-child(1)').trigger('tap');
     $("div.techno_slider_nav.w-slider-nav div:nth-child(2)").trigger("tap");
     $("#techno_description").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
-    $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
+    $("#techno_introduction").addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
   });
 
   $("#techno_slider")
