@@ -14,16 +14,25 @@ $(document).ready(function () {
     //$('.w-slider-nav:nth-child(1)').trigger('tap');
     $("div.techno_slider_nav.w-slider-nav div:nth-child(2)").trigger("tap");
     $("#techno_description").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
-    $("#techno_introduction").addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
+    $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
   });
 
-  $("#techno_slider")
-    .children()
-    .each(function () {
-      if ($(this).attr("aria-hidden") === "true") {
-        $(this).css("height", "0px");
-      }
-    });
+  //HEDO NAV
+  $("#hedo_description").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.hedo_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
+    $("#hedo_introduction").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
+  });
+  $("#hedo_introduction").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.hedo_slider_nav.w-slider-nav div:nth-child(2)").trigger("tap");
+    $("#hedo_description").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
+  });
+
   // FACTIONS NAV
   $("#1").click(function (e) {
     e.preventDefault();
