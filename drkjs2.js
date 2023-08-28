@@ -66,11 +66,11 @@ $(document).ready(function () {
   });
 
   // FACTIONS NAV
-  /*$("#1, #2, #3, #4").on("click", function () {
-    $('.w-slide[aria-hidden="true"]').each(function () {
+  $("#1, #2, #3, #4").on("click", function () {
+    $('.w-slide [aria-hidden="true"]').each(function () {
       $(this).css("height", "0px");
     });
-  });*/
+  });
 
   $("#1").click(function (e) {
     e.preventDefault();
