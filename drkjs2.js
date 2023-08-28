@@ -66,30 +66,42 @@ $(document).ready(function () {
   });
 
   // FACTIONS NAV
-  $("#1, #2, #3, #4").on("click", function () {
+  /*$("#1, #2, #3, #4").on("click", function () {
     $('.w-slide [aria-hidden="true"]').each(function () {
       $(this).css("height", "0px");
     });
-  });
+  });*/
 
   $("#1").click(function (e) {
     e.preventDefault();
     //$('.w-slider-nav:nth-child(1)').trigger('tap');
     $("div.factions_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
+    $("div.techno_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
+    $("#techno_introduction").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
   });
   $("#2").click(function (e) {
     e.preventDefault();
     $("div.factions_slider_nav.w-slider-nav div:nth-child(2)").trigger("tap");
+    $("div.hedo_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
+    $("#hedo_introduction").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
     //$('.w-slider-nav:nth-child(2)').trigger('tap');
   });
   $("#3").click(function (e) {
     e.preventDefault();
     $("div.factions_slider_nav.w-slider-nav div:nth-child(3)").trigger("tap");
+    $("div.barb_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
+    $("#barb_introduction").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
     //$('.w-slider-nav:nth-child(2)').trigger('tap');
   });
   $("#4").click(function (e) {
     e.preventDefault();
     $("div.factions_slider_nav.w-slider-nav div:nth-child(4)").trigger("tap");
+    $("div.nomads_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
+    $("#nomads_introduction").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
     //$('.w-slider-nav:nth-child(2)').trigger('tap');
   });
   //QUIZ NAV
