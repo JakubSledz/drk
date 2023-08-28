@@ -13,7 +13,7 @@ $(document).ready(function () {
     $("div.techno_slider_nav.w-slider-nav div:nth-child(2)").trigger("tap");
   });
 
-  $("#techno_slider_elements")
+  $("#techno_slider")
     .children()
     .each(function () {
       if ($(this).attr("aria-hidden") === "true") {
