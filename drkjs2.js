@@ -151,11 +151,12 @@ $(document).ready(function () {
     //$('.w-slider-nav:nth-child(1)').trigger('tap');
     $("div.surv_slider_nav.w-slider-nav div:nth-child(10)").trigger("tap");
   });
+  /*
   $("#ten-one, #ten-two, #ten-three, #ten-four").click(function (e) {
     e.preventDefault();
     //$('.w-slider-nav:nth-child(1)').trigger('tap');
     $("div.surv_slider_nav.w-slider-nav div:nth-child(11)").trigger("tap");
-  });
+  });*/
   $("#reset_quiz").click(function (e) {
     e.preventDefault();
     // Remove the "selected" class from all elements with class "quiz-a"
@@ -312,14 +313,14 @@ $("#nine-one, #nine-two, #nine-three, #nine-four").each(function () {
     localStorage.setItem("answerNine", answerNine);
   });
 });
-
+/*
 $("#ten-one, #ten-two, #ten-three, #ten-four").each(function () {
   $(this).on("click", function () {
     let answerTen = $(this).attr("data-answer");
     let answerEleven = $(this).attr("data-answer");
     localStorage.setItem("answerTen", answerTen);
   });
-});
+});/*
 
 $(".quiz-a").on("click", function () {
   $(this).addClass("selected");
@@ -352,8 +353,8 @@ $(".check-answer").on("click", function (e) {
   let answerSeven = Number(localStorage.getItem("answerSeven"));
   let answerEight = Number(localStorage.getItem("answerEight"));
   let answerNine = Number(localStorage.getItem("answerNine"));
-  let answerTen = Number(localStorage.getItem("answerTen"));
-  let answerEleven = Number(localStorage.getItem("answerEleven"));
+  // let answerTen = Number(localStorage.getItem("answerTen"));
+  //let answerEleven = Number(localStorage.getItem("answerEleven"));
 
   var numbers = [
     answerOne,
@@ -365,8 +366,8 @@ $(".check-answer").on("click", function (e) {
     answerSeven,
     answerEight,
     answerNine,
-    answerTen,
-    answerEleven,
+    //answerTen,
+    //answerEleven,
   ];
 
   //Function to calculate the average
@@ -434,7 +435,7 @@ $(".check-answer").on("click", function (e) {
   }
   e.preventDefault();
   //$('.w-slider-nav:nth-child(1)').trigger('tap');
-  $("div.surv_slider_nav.w-slider-nav div:nth-child(10)").trigger("tap");
+  $("div.surv_slider_nav.w-slider-nav div:nth-child(11)").trigger("tap");
 
   //Use jQuery to display the copy in an element with the id "result"
 });
