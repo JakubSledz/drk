@@ -434,7 +434,7 @@ $(".check-answer").on("click", function (e) {
   }
   e.preventDefault();
   //$('.w-slider-nav:nth-child(1)').trigger('tap');
-  $("div.surv_slider_nav.w-slider-nav div:nth-child(12)").trigger("tap");
+  $("div.surv_slider_nav.w-slider-nav div:nth-child(11)").trigger("tap");
 
   //Use jQuery to display the copy in an element with the id "result"
 });
