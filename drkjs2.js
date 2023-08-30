@@ -396,7 +396,7 @@ $(".check-answer").on("click", function (e) {
   var copy;
   switch (mostFrequentNumber) {
     case 1:
-      copy = "Hedonists";
+      copy = "Hedonist";
       $(".answer-value").text(copy);
       $(".answer-logo").addClass("hedo");
       $(".answer-logo").removeClass("techno");
@@ -404,7 +404,7 @@ $(".check-answer").on("click", function (e) {
       $(".answer-logo").removeClass("barba");
       break;
     case 2:
-      copy = "Barbarians";
+      copy = "Barbarian";
       $(".answer-value").text(copy);
       $(".answer-logo").addClass("barba");
       $(".answer-logo").removeClass("techno");
@@ -413,7 +413,7 @@ $(".check-answer").on("click", function (e) {
 
       break;
     case 3:
-      copy = "Nomads";
+      copy = "Nomad";
       $(".answer-value").text(copy);
       $(".answer-logo").addClass("nomads");
       $(".answer-logo").removeClass("techno");
@@ -422,7 +422,7 @@ $(".check-answer").on("click", function (e) {
 
       break;
     case 4:
-      copy = "Technognostics";
+      copy = "Technognostic";
       $(".answer-value").text(copy);
       $(".answer-logo").addClass("techno");
       $(".answer-logo").removeClass("nomads");
@@ -459,3 +459,61 @@ Webflow.push(function () {
       r.trigger("tap");
     });
 });
+
+/*
+  if(slideNumber = 2) {
+         		$("#2")
+     				 .find(".tabline, .tab_shape")
+      				.addClass("tab_active")
+      				.removeClass("hedo");
+             $("#1")
+      				.find(".tabline, .tab_shape")
+     				  .removeClass("tab_active")
+     					.addClass("techno");
+    				$("#3")
+      				.find(".tabline, .tab_shape")
+      				.removeClass("tab_active")
+      				.addClass("barbarians");
+    				$("#4")
+      				.find(".tabline, .tab_shape")
+      				.removeClass("tab_active")
+      				.addClass("nomads");
+         };
+         if(slideNumber = 4) {
+         		$("#4")
+     				 .find(".tabline, .tab_shape")
+      				.addClass("tab_active")
+      				.removeClass("nomads");
+             $("#1")
+      				.find(".tabline, .tab_shape")
+     				  .removeClass("tab_active")
+     					.addClass("techno");
+    				$("#3")
+      				.find(".tabline, .tab_shape")
+      				.removeClass("tab_active")
+      				.addClass("barbarians");
+    				$("#2")
+      				.find(".tabline, .tab_shape")
+      				.removeClass("tab_active")
+      				.addClass("hedo");
+         };
+          if(slideNumber = 1) {
+         		$("#1")
+     				 .find(".tabline, .tab_shape")
+      				.addClass("tab_active")
+      				.removeClass("techno");
+             $("#4")
+      				.find(".tabline, .tab_shape")
+     				  .removeClass("tab_active")
+     					.addClass("nomads");
+    				$("#3")
+      				.find(".tabline, .tab_shape")
+      				.removeClass("tab_active")
+      				.addClass("barbarians");
+    				$("#2")
+      				.find(".tabline, .tab_shape")
+      				.removeClass("tab_active")
+      				.addClass("hedo");
+         };
+         
+*/
