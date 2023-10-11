@@ -32,14 +32,24 @@ $(document).ready(function () {
     e.preventDefault();
     //$('.w-slider-nav:nth-child(1)').trigger('tap');
     $("div.hedo_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
-    $("#hedo_introduction").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $("#hedo_introduction").removeClass("btn_active");
+    $("#hedo_act").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
     $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
   });
   $("#hedo_introduction").click(function (e) {
     e.preventDefault();
     //$('.w-slider-nav:nth-child(1)').trigger('tap');
     $("div.hedo_slider_nav.w-slider-nav div:nth-child(2)").trigger("tap");
-    $("#hedo_description").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $("#hedo_description").removeClass("btn_active");
+    $("#hedo_act").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
+  });
+  $("#hedo_act").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.hedo_slider_nav.w-slider-nav div:nth-child(3)").trigger("tap");
+    $("#hedo_description").removeClass("btn_active");
+    $("#hedo_introduction").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
     $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
   });
 
@@ -48,14 +58,24 @@ $(document).ready(function () {
     e.preventDefault();
     //$('.w-slider-nav:nth-child(1)').trigger('tap');
     $("div.barb_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
-    $("#barb_introduction").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $("#barb_introduction").removeClass("btn_active");
+    $("#barb_act").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
     $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
   });
   $("#barb_introduction").click(function (e) {
     e.preventDefault();
     //$('.w-slider-nav:nth-child(1)').trigger('tap');
     $("div.barb_slider_nav.w-slider-nav div:nth-child(2)").trigger("tap");
-    $("#barb_description").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $("#barb_description").removeClass("btn_active");
+    $("#barb_act").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
+  });
+  $("#barb_act").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.barb_slider_nav.w-slider-nav div:nth-child(3)").trigger("tap");
+    $("#barb_description").removeClass("btn_active");
+    $("#barb_introduction").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
     $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
   });
 
@@ -64,14 +84,24 @@ $(document).ready(function () {
     e.preventDefault();
     //$('.w-slider-nav:nth-child(1)').trigger('tap');
     $("div.nomads_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
-    $("#nomads_introduction").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $("#nomads_introduction").removeClass("btn_active");
+    $("#nomads_act").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
     $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
   });
   $("#nomads_introduction").click(function (e) {
     e.preventDefault();
     //$('.w-slider-nav:nth-child(1)').trigger('tap');
     $("div.nomads_slider_nav.w-slider-nav div:nth-child(2)").trigger("tap");
-    $("#nomads_description").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $("#nomads_description").removeClass("btn_active");
+    $("#nomads_act").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
+  });
+  $("#nomads_act").click(function (e) {
+    e.preventDefault();
+    //$('.w-slider-nav:nth-child(1)').trigger('tap');
+    $("div.nomads_slider_nav.w-slider-nav div:nth-child(3)").trigger("tap");
+    $("#nomads_description").removeClass("btn_active");
+    $("#nomads_introduction").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
     $(this).addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
   });
 
@@ -87,14 +117,16 @@ $(document).ready(function () {
     //$('.w-slider-nav:nth-child(1)').trigger('tap');
     $("div.factions_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
     $("div.techno_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
-    $("#techno_introduction").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $("#techno_introduction").removeClass("btn_active");
+    $("#techno_activities").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
     $("#techno_description").addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
   });
   $("#2").click(function (e) {
     e.preventDefault();
     $("div.factions_slider_nav.w-slider-nav div:nth-child(2)").trigger("tap");
     $("div.hedo_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
-    $("#hedo_introduction").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $("#hedo_introduction").removeClass("btn_active");
+    $("#hedo_act").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
     $("#hedo_description").addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
     //$('.w-slider-nav:nth-child(2)').trigger('tap');
   });
@@ -102,7 +134,9 @@ $(document).ready(function () {
     e.preventDefault();
     $("div.factions_slider_nav.w-slider-nav div:nth-child(3)").trigger("tap");
     $("div.barb_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
-    $("#barb_introduction").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $("#barb_introduction").removeClass("btn_active");
+    $("#barb_act").removeClass("btn_active");
+    // This line removes the class 'btn_active' from the element that currently has it
     $("#barb_description").addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
     //$('.w-slider-nav:nth-child(2)').trigger('tap');
   });
@@ -110,7 +144,8 @@ $(document).ready(function () {
     e.preventDefault();
     $("div.factions_slider_nav.w-slider-nav div:nth-child(4)").trigger("tap");
     $("div.nomads_slider_nav.w-slider-nav div:nth-child(1)").trigger("tap");
-    $("#nomads_introduction").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
+    $("#nomads_introduction").removeClass("btn_active");
+    $("#nomads_act").removeClass("btn_active"); // This line removes the class 'btn_active' from the element that currently has it
     $("#nomads_description").addClass("btn_active"); // This line adds the class 'btn_active' to the clicked element
     //$('.w-slider-nav:nth-child(2)').trigger('tap');
   });
